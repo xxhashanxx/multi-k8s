@@ -14,7 +14,7 @@ before_install:
   - gcloud components update kubectl
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project celtic-music-302917
-  - gcloud config set compute/zone australia-southeast1-a
+  - gcloud config set compute/zone us-central1-a
   - gcloud container clusters get-credentials multi-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t xxhashanxx/react-test -f ./client/Dockerfile.dev ./client
