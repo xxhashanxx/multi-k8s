@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: xxhashanxx-ticketing-app-prod-fun-tls
+spec:
+  secretName: xxhashanxx-ticketing-app-prod-fun
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: xxhashanxx-ticketing-app-prod.fun
+  dnsNames:
+    - xxhashanxx-ticketing-app-prod.fun
+    - www.xxhashanxx-ticketing-app-prod.fun
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - www.xxhashanxx-ticketing-app-prod.fun
+          - xxhashanxx-ticketing-app-prod.fun
