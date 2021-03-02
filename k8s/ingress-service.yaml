@@ -9,7 +9,6 @@ metadata:
     # UPDATE THIS LINE ABOVE
 spec:
   rules:
-    - host: http://34.66.225.52/
       http:
         paths:
           - path: /?(.*)
