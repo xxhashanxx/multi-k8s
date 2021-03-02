@@ -9,7 +9,7 @@ metadata:
     # UPDATE THIS LINE ABOVE
 spec:
   rules:
-    - host: ticketing.dev
+    - host: http://34.66.116.143
       http:
         paths:
           - path: /?(.*)
